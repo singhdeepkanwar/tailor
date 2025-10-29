@@ -44,24 +44,25 @@
             <div id="addClientMessage"></div>
         </section>
 
-        <section id="createOrderSection" class="hidden-section">
-            <h3>Create New Order</h3>
-            <form id="createOrderForm">
-                <label for="selectClient">Select Client:</label>
-                <select id="selectClient" required>
-                    <option value="">-- Select a client --</option>
-                </select><br>
+      <section id="createOrderSection" class="hidden-section">
+    <h3>Create New Order</h3>
+    <form id="createOrderForm">
+        <label for="clientSearchInput">Search Client by Phone No:</label>
+        <input type="text" id="clientSearchInput" placeholder="Enter phone number to search" required><br>
+        <div id="clientSuggestions" class="suggestions-box"></div>
+        <input type="hidden" id="selectedClientId"> <!-- To store the actual client ID -->
+        <span id="selectedClientDisplay"></span><br> <!-- To display selected client's name -->
 
-                <h4>Products for this Order:</h4>
-                <div id="productsContainer">
-                    <!-- Product inputs will be added here by JS -->
-                </div>
-                <button type="button" id="addProductBtn">Add Another Product</button><br>
-                
-                <button type="submit">Place Order</button>
-            </form>
-            <div id="createOrderMessage"></div>
-        </section>
+        <h4>Products for this Order:</h4>
+        <div id="productsContainer">
+            <!-- Product inputs will be added here by JS -->
+        </div>
+        <button type="button" id="addProductBtn">Add Another Product</button><br>
+
+        <button type="submit">Place Order</button>
+    </form>
+    <div id="createOrderMessage"></div>
+</section>
     </main>
 
     <script src="script.js"></script>

@@ -7,6 +7,22 @@
       "address": "Sang",
       "email": "",
       "notes": ""
+    },
+    {
+      "id": "cl1761740591363",
+      "phoneNo": "9872180369",
+      "name": "Sanjay",
+      "address": "",
+      "email": "",
+      "notes": ""
+    },
+    {
+      "id": "cl1761740661870",
+      "phoneNo": "9872663031",
+      "name": "Vishnu",
+      "address": "",
+      "email": "",
+      "notes": ""
     }
   ],
   "orders": [
