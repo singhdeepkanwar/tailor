@@ -1,0 +1,10 @@
+{
+  "clients": [],
+  "orders": [],
+  "productTypes": [
+    {"id": "pt001", "name": "Shirt"},
+    {"id": "pt002", "name": "Kurta"},
+    {"id": "pt003", "name": "Pant"},
+    {"id": "pt004", "name": "Jacket"}
+  ]
+}
