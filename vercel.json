@@ -1,13 +1,10 @@
-
 {
   "version": 2,
   "cleanUrls": true,
-  "trailingSlash": false, 
-
-  "outputDirectory": "public",
+  "trailingSlash": false,
+  "outputDirectory": "public", 
 
   "builds": [
-   
     {
       "src": "api/*.js",
       "use": "@vercel/node"
@@ -18,13 +15,24 @@
     }
   ],
   "routes": [
+
+    {
+      "src": "/",
+      "dest": "/index.html"
+    },
+
+    {
+      "src": "/(.*\\.(?:css|js|png|jpg|jpeg|gif|ico|svg))",
+      "dest": "/$1"
+    },
     {
       "src": "/api/(.*)", 
       "dest": "/api/$1"
     },
+
     {
-      "src": "/(.*)", 
-      "dest": "/index.html" 
+      "src": "/(.*)",
+      "dest": "/index.html"
     }
   ]
 }
