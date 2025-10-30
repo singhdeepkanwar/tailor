@@ -1,32 +1,41 @@
+
 {
   "version": 2,
   "cleanUrls": true,
   "trailingSlash": false,
-  "outputDirectory": "public", 
+  "outputDirectory": "public",
+
+  "env": {
+    "MONGODB_URI": "@mongodb_uri" 
+  },
 
   "builds": [
-
     {
-      "src": "api/**/*.js",
+      "src": "api/*.js", 
       "use": "@vercel/node"
     }
   ],
   "routes": [
-
     {
       "src": "/",
       "dest": "/index.html"
     },
-
+    {
+      "src": "/api/clients",
+      "dest": "/api/clients.js"
+    },
+    {
+      "src": "/api/productTypes",
+      "dest": "/api/productTypes.js"
+    },
+    {
+      "src": "/api/orders",
+      "dest": "/api/orders.js"
+    },
     {
       "src": "/(.*\\.(?:css|js|png|jpg|jpeg|gif|ico|svg))",
       "dest": "/$1"
     },
-    {
-      "src": "/api/(.*)", 
-      "dest": "/api/$1"
-    },
-
     {
       "src": "/(.*)",
       "dest": "/index.html"
