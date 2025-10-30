@@ -93,5 +93,8 @@
   "devDependencies": {
     "nodemon": "^3.0.1"
   },
+  "env": {
+  "MONGODB_URI": "@mongodb_uri" 
+},
   "homepage": "https://github.com/singhdeepkanwar/tailor#readme"
 }
