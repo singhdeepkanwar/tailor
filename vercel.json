@@ -1,17 +1,15 @@
-
 {
   "version": 2,
-  "cleanUrls": true,
-  "trailingSlash": false,
+
   "outputDirectory": "public",
 
   "env": {
-    "MONGODB_URI": "@mongodb_uri" 
+    "MONGODB_URI": "@mongodb_uri"
   },
 
   "builds": [
     {
-      "src": "api/*.js", 
+      "src": "api/*.js",
       "use": "@vercel/node"
     }
   ],
@@ -32,10 +30,12 @@
       "src": "/api/orders",
       "dest": "/api/orders.js"
     },
+
     {
-      "src": "/(.*\\.(?:css|js|png|jpg|jpeg|gif|ico|svg))",
-      "dest": "/$1"
+      "src": "/(.*\\.(?:css|js|png|jpg|jpeg|gif|ico|svg|json|webp|map|txt))",
+      "dest": "/public/$1" 
     },
+
     {
       "src": "/(.*)",
       "dest": "/index.html"
